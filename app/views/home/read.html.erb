@@ -1,0 +1,10 @@
+<h1>게시판 글 목록</h1>
+<a href="/">[글 쓰러 가기]</a><br>
+
+<% @posts.each do |x| %>
+제목 : <%= x.db_title %><br>
+내용 : <%= x.db_content %><br>
+<a href = "/destroy/<%= x.id %>">[삭제]</a>
+<a href = "/update_view/<%= x.id %>">[수정]</a>
+<hr>
+<% end %>
